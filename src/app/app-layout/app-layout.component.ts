@@ -6,7 +6,7 @@ import { map, shareReplay } from 'rxjs/operators';
 @Component({
   selector: 'app-layout',
   templateUrl: './app-layout.component.html',
-  styleUrls: ['./app-layout.component.css']
+  styleUrls: ['./app-layout.component.scss']
 })
 export class AppLayoutComponent {
 
