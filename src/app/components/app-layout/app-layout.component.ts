@@ -18,4 +18,8 @@ export class AppLayoutComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  search(query: string) {
+    console.log(`Search: ${query}`);
+  }
+
 }

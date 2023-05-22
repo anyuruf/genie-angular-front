@@ -1,0 +1,13 @@
+.example-card {
+    max-width: 36rem;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2rem;
+    padding-top: 2rem;
+  }
+.d3force {
+  width: 100%;
+}

@@ -1,27 +1,28 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list color="primary">
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Sign Out</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        color="accent"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span >genie-angular-front</span>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<header class="toolbar">
+  <div class="left header-item">
+    <button aria-label="Menu">
+    </button>
+    <h1>Geneology</h1>
+  </div>
+  <div class="center header-item">
+    <form class="search-form">
+        <input #input type="text" matInput placeholder="Search" autocomplete="off">
+        <button (click)="search(input.value.toString())">search</button>
+    </form>
+    <button aria-label="Voice search">
+    </button>
+  </div>
+  <div class="right header-item">
+    <button aria-label="Create">
+    </button>
+    <button aria-label="Apps">
+    </button>
+    <button aria-label="Notifications" color="accent">
+    </button>
+    <button aria-label="Profile" color="primary">
+    </button>
+  </div>
+</header>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
